@@ -1,0 +1,17 @@
+{
+  "name": "pong",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "phaser": "^3.55.2",
+    "webfontloader": "^1.6.28"
+  },
+  "scripts": {
+    "start": "parcel src/index.html -p 8080"
+  },
+  "devDependencies": {
+    "parcel": "^2.3.2",
+    "parcel-reporter-static-files-copy": "^1.3.4"
+  }
+}
