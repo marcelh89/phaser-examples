@@ -1,0 +1,49 @@
+{
+  "name": "multiplayer-tictactoe",
+  "version": "1.0.0",
+  "description": "A typescript template project for Phaser 3 using Parceljs",
+  "type": "module",
+  "scripts": {
+    "start": "parcel src/client/index.html -p 8000",
+    "start-server": "ts-node-dev --project tsconfig.server.json src/server/index.ts",
+    "build": "parcel build src/client/index.html --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
+  },
+  "author": "supertommy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ourcade/phaser3-parcel-template.git"
+  },
+  "homepage": "https://github.com/ourcade/phaser3-parcel-template",
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "eslint": "^6.8.0",
+    "minimist": ">=1.2.2",
+    "parcel": "^2.3.2",
+    "parcel-plugin-clean-easy": "^1.0.2",
+    "parcel-plugin-static-files-copy": "^2.4.3",
+    "ts-node": "^10.6.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@colyseus/monitor": "^0.14.22",
+    "colyseus": "^0.14.23",
+    "colyseus.js": "^0.14.13",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "phaser": "^3.55.2"
+  },
+  "parcelCleanPaths": [
+    "dist"
+  ],
+  "staticFiles": {
+    "staticPath": "public",
+    "watcherGlob": "**"
+  }
+}
