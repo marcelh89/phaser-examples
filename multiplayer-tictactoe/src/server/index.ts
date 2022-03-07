@@ -3,9 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import {Server} from 'colyseus';
 import {monitor} from '@colyseus/monitor';
-// import socialRoutes from '@colyseus/social/express';
-
-import {MyRoom} from './rooms/MyRoom';
+import TicTacToe from "./rooms/TicTacToe";
 
 const port = Number(process.env.PORT || 5001);
 const app = express();
@@ -19,12 +17,7 @@ const gameServer = new Server({
 });
 
 // register your room handlers
-gameServer.define('room', MyRoom);
-
-/**
- * Register @colyseus/social routes
- */
-//app.use("/", socialRoutes);
+gameServer.define('tic-tac-toe', TicTacToe);
 
 // register colyseus monitor AFTER registering your room handlers
 app.use('/colyseus', monitor());
